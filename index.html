@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend course</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <!-- DATE -->
+        <div>
+            <p id="day" data-testid="currentDayOfTheWeek" class="day"></p>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="place_holder">
+            <img data-testid="slackDisplayImage" src="static/user-image.png" alt="odion-uwaifo" />
+        </div>
+
+        <!-- SLACK NAME -->
+        <div class="text_holder">
+            <h3 data-testid="slackUserName">ODION UWAIFO</h3>
+            <p data-testid="myTrack">Track:  Frontend </p>
+            <a href="https://github.com/pauluwaifo/slackProject" 
+                class="link" 
+                target="_blank"
+                data-testid="githubURL">
+                Connect on GitHub
+            </a>
+        </div>
+
+        <!-- TIME -->
+        <div>
+            <p id="time" data-testid="currentUTCTime" class="time"></p>
+        </div>
+
+        <!-- BORDER -->
+        <div class="border"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
