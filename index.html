@@ -9,33 +9,27 @@
 <body>
     
     <div class="container">
-        <!-- DATE -->
-        <div>
-            <p id="day" data-testid="currentDayOfTheWeek" class="day"></p>
-        </div>
-
         <!-- MAIN CONTENT -->
+        <!-- NAME -->
+        <h3 data-testid="slackUserName">ODION UWAIFO</h3>
+        <!-- IMAGE -->
         <div class="place_holder">
             <img data-testid="slackDisplayImage" src="static/user-image.png" alt="odion-uwaifo" />
         </div>
-
-        <!-- SLACK NAME -->
-        <div class="text_holder">
-            <h3 data-testid="slackUserName">ODION UWAIFO</h3>
-            <p data-testid="myTrack">Track:  Frontend </p>
-            <a href="https://github.com/pauluwaifo/hngx-stage-one" 
-                class="link" 
-                target="_blank"
-                data-testid="githubURL">
-                Connect on GitHub
-            </a>
-        </div>
-
-        <!-- TIME -->
-        <div>
+        <!-- TIME AND DATE-->
+        <div class="mt-2">
+            <p id="day" data-testid="currentDayOfTheWeek" class="day"></p>
             <p id="time" data-testid="currentUTCTime" class="time"></p>
         </div>
-
+        <!-- MY TRACK -->
+        <p data-testid="myTrack">Track:  Frontend </p>
+        <!-- LINK TO GITHUB -->
+        <a href="https://github.com/pauluwaifo/hngx-stage-one" 
+            class="link" 
+            target="_blank"
+            data-testid="githubURL">
+            Connect on GitHub
+        </a>
         <!-- BORDER -->
         <div class="border"></div>
     </div>
