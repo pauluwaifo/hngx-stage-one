@@ -1,23 +1,26 @@
-function updateTime() {
-    const currentDate = new Date();
-    const hours = String(currentDate.getUTCHours()).padStart(2, '0');
-    const minutes = String(currentDate.getUTCMinutes()).padStart(2, '0');
-    const seconds = String(currentDate.getUTCSeconds()).padStart(2, '0');
-    const milliseconds = String(currentDate.getUTCMilliseconds()).padStart(3, '0');
-    const timeString = `Current UTC Time: ${hours}:${minutes}:${seconds}.${milliseconds} UTC`;
-    const timeElement = document.getElementById('time');
-    timeElement.textContent = timeString;
-}
+// JavaScript to populate dynamic data
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the current date and time
+    const now = new Date();
 
-function Day() {
-    const currentDate = new Date();
-    const currentDayNumber = currentDate.getUTCDay(); 
+    // Get the day of the week
     const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    const currentDay = daysOfWeek[currentDayNumber]
-    const dayElement = document.getElementById('day');
-    dayElement.textContent = `Current Day: ${currentDay}`;
-}
+    const currentDay = daysOfWeek[now.getUTCDay()];
 
-updateTime()
-Day()
-setInterval(updateTime, 1)
+    // Update the elements with the dynamic data
+    document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent = ` ${currentDay}`;
+
+    // Initial call to update the UTC time
+    updateUTCTime();
+
+    // Update the UTC time every second (real-time)
+    setInterval(updateUTCTime, 1000);
+});
+
+
+// Function to update the UTC time in milliseconds
+function updateUTCTime() {
+    const now = new Date();
+    const currentUTCTimeInMillis = now.getTime(); // Get time in milliseconds
+    document.querySelector('[data-testid="currentUTCTime"]').textContent = `${currentUTCTimeInMillis}`;
+}

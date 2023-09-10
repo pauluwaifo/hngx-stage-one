@@ -1,39 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontend course</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-    <div class="container">
-        <!-- MAIN CONTENT -->
-        <!-- NAME -->
-        <h3 data-testid="slackUserName">ODION UWAIFO</h3>
-        <!-- IMAGE -->
-        <div class="place_holder">
-            <img data-testid="slackDisplayImage" src="static/user-image.png" alt="odion-uwaifo" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Personal Data</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div>
+      <div class="container">
+        <div class="wrapper">
+          <div class="profile">
+            <!-- Slack Name -->
+            <p data-testid="slackUserName" id="slack_username">Odion Uwaifo</p>
+            <!-- Slack Display Picture -->
+            <div class="profile-img-wrapper">
+              <div id="profile-image">
+                <img
+                  src="static/user-image.png"
+                  alt="odionuwaifo"
+                  data-testid="slackDisplayImage"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="live-data">
+            <!-- Current Day of the Week -->
+            <div class="current-day">
+              <p data-testid="currentDayOfTheWeek" class="current-data">
+                Loading...
+              </p>
+            </div>
+            <div class="current-time">
+              <!-- Current UTC Time -->
+              <p data-testid="currentUTCTime" class="current-data">
+                Loading...
+              </p>
+            </div>
+            <!-- Track -->
+            <p data-testid="myTrack" id="my-track">Frontend Track</p>
+          </div>
+          <button>
+            <a
+              href="https://github.com/pauluwaifo/hngx-stage-one"
+              target="_blank"
+              data-testid="githubURL"
+            >
+              Github Repo</a
+            >
+          </button>
         </div>
-        <!-- TIME AND DATE-->
-        <div class="mt-2">
-            <p id="day" data-testid="currentDayOfTheWeek" class="day"></p>
-            <p id="time" data-testid="currentUTCTime" class="time"></p>
-        </div>
-        <!-- MY TRACK -->
-        <p data-testid="myTrack">Track:  Frontend </p>
-        <!-- LINK TO GITHUB -->
-        <a href="https://github.com/pauluwaifo/hngx-stage-one" 
-            class="link" 
-            target="_blank"
-            data-testid="githubURL">
-            Connect on GitHub
-        </a>
-        <!-- BORDER -->
-        <div class="border"></div>
+      </div>
     </div>
-
-    <script src="script.js"></script>
-</body>
+  </body>
 </html>
